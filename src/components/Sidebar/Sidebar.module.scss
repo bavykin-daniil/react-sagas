@@ -1,0 +1,76 @@
+@import '../../styles/index';
+
+.sidebar {
+  width: 80px;
+  height: 100vh;
+  padding: 41px 0;
+  background-color: $lavender;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 75px;
+}
+
+.linkContainer {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 0;
+  align-items: center;
+  padding: 16px 22px;
+  transition: all 0.3s;
+
+  &:hover {
+    grid-row-gap: 5px;
+    background-color: $raker;
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+
+    .linkName {
+      opacity: 1;
+      max-height: 100px;
+    }
+  }
+
+  &.active {
+    grid-row-gap: 5px;
+    background-color: $lilac;
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+
+    .linkName {
+      opacity: 1;
+      max-height: 100px;
+    }
+  }
+}
+
+.linkIconContainer {
+  width: 32px;
+  height: 32px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.linkName {
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0;
+  font-weight: 700;
+  font-size: 10px;
+  color: $white;
+  transition: all 0.3s;
+}

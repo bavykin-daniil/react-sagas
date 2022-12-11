@@ -1,10 +1,11 @@
 import React from 'react';
-import Header from '../Header/Header';
+import Sidebar from '../Sidebar/Sidebar';
+import LINKS from '../../constants/links';
 
 const Root: React.FC = () => {
   return (
-    <div className="container">
-      <Header />
+    <div>
+      <Sidebar links={LINKS} />
     </div>
   );
 };
