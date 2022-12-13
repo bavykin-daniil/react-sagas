@@ -1,9 +1,12 @@
 import React from 'react';
+import styles from './Header.module.scss';
 
 const Header: React.FC = () => {
   return (
-    <header>
-      <h1>Awesome desk</h1>
+    <header className={styles.header}>
+      <div className="container">
+        <h1 className={styles.title}>Awesome notes</h1>
+      </div>
     </header>
   );
 };
